@@ -52,7 +52,7 @@ export default function Manifesto() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as const }}
             className="lg:col-span-4 relative"
           >
             <div className="relative aspect-[3/4] overflow-hidden border border-ivoire/10 mx-auto max-w-sm lg:max-w-none">

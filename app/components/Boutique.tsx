@@ -183,7 +183,7 @@ export default function Boutique() {
             key={current.num}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
             className="col-span-7 border border-ivoire/10 bg-noir-deep/60 backdrop-blur-sm overflow-hidden"
           >
             <div className="relative aspect-[4/3] overflow-hidden">

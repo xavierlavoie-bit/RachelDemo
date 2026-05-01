@@ -28,7 +28,7 @@ export default function Nav() {
       <motion.header
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] as const }}
         className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${
           scrolled
             ? "bg-noir/70 backdrop-blur-xl border-b border-ivoire/5"

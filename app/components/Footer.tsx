@@ -9,7 +9,7 @@ export default function Footer() {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as const }}
         className="max-w-[1400px] mx-auto"
       >
         <h4 className="font-display text-[clamp(3.5rem,18vw,16rem)] leading-[0.85] text-ivoire/90 break-all">

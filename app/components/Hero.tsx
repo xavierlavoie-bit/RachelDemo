@@ -1,23 +1,25 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { useRef } from "react";
 import Magnetic from "./Magnetic";
 
 const word = "RACHEL";
 
-const containerVariants = {
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const containerVariants: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.08, delayChildren: 0.4 } },
 };
 
-const letterVariants = {
+const letterVariants: Variants = {
   hidden: { y: "110%", opacity: 0, rotate: 6 },
   show: {
     y: 0,
     opacity: 1,
     rotate: 0,
-    transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 1.2, ease: EASE },
   },
 };
 
@@ -58,7 +60,7 @@ export default function Hero() {
       <motion.div
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
-        transition={{ duration: 1.4, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.4, delay: 0.2, ease: EASE }}
         className="absolute top-28 left-12 right-12 h-px bg-ivoire/15 origin-left hidden md:block"
       />
 
@@ -92,7 +94,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, delay: 0.2, ease: EASE }}
           className="font-serif italic text-rose-soft text-sm sm:text-base md:text-lg tracking-[0.18em] sm:tracking-[0.2em] mb-4 md:mb-6"
         >
           ⟢ artiste · maquilleuse · photographe ⟢

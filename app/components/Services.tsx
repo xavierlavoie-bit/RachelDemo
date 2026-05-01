@@ -132,7 +132,7 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.2, delay: 0.3 + index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.2, delay: 0.3 + index * 0.08, ease: [0.22, 1, 0.36, 1] as const }}
         className="absolute top-0 left-0 right-0 h-px bg-rose origin-left opacity-0 group-hover:opacity-100"
       />
 

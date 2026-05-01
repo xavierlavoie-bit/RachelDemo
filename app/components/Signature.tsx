@@ -101,7 +101,7 @@ function SignatureCard({
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as const }}
       data-cursor="voir"
       className="group relative border border-ivoire/10 bg-noir-deep/60 backdrop-blur-sm p-6 sm:p-8 md:p-12 overflow-hidden hover:border-rose/40 transition-all duration-700"
     >
